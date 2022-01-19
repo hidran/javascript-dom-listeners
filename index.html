@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document Object model</Object></title>
+        <script>
+            window.onload = function (params) {
+                const myH1 = document.getElementById('title');
+                myH1.style.color = 'red';
+                console.log(myH1);
+            }
+            window.addEventListener('load', (evt) => {
+                console.log(evt);
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1 id="title">DOMContentLoaded</h1>
+        <img src="https://via.placeholder.com/728x90.png?text= Visit this hosting">
+    </body>
+
+</html>
