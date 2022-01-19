@@ -6,14 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document Object model</Object></title>
         <script>
-            window.onload = function (params) {
+            document.addEventListener('DOMContentLoaded', () => {
                 const myH1 = document.getElementById('title');
+                myH1.onmouseenter = () => {
+                    myH1.style.border = '2px solid green';
+                }
+                myH1.addEventListener('mouseleave', (evt) => {
+                    evt.target.style.border = '1px solid black';
+                });
                 myH1.style.color = 'red';
                 console.log(myH1);
-            }
-            window.addEventListener('load', (evt) => {
-                console.log(evt);
             });
+
+
         </script>
     </head>
 
